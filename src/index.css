@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom dark mode & high-contrast styling for Leaflet map tiles */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #090d16 !important;
+  font-family: inherit;
+}
+
+/* Sleek dark mode filter for OpenStreetMap tiles that prevents glare and looks premium */
+.dark-tiles .leaflet-tile {
+  filter: brightness(0.65) invert(1) contrast(3) hue-rotate(200deg) saturate(0.35) brightness(0.72);
+}
+
+/* Outdoor / daylight high contrast mode */
+.outdoor-tiles .leaflet-tile {
+  filter: saturate(1.1) contrast(1.05);
+}
+
+/* Custom pulse animations for driver marker and SOS beacon */
+@keyframes ring-pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.animate-ring {
+  animation: ring-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
+
+/* iOS Safari & Android Safe Area Insets */
+.pb-safe {
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
+.pt-safe {
+  padding-top: max(0.5rem, env(safe-area-inset-top));
+}
+
+/* Eliminate tap delays & gray highlight on Android & iOS mobile browsers */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+

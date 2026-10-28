@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="128" fill="#0F172A"/>
+  <!-- Subtle circular gradient backdrop -->
+  <circle cx="256" cy="256" r="180" fill="url(#brandGradient)" opacity="0.15"/>
+  <circle cx="256" cy="256" r="140" stroke="#F59E0B" stroke-width="6" stroke-dasharray="12 12" opacity="0.4"/>
+  
+  <!-- Stylized H and Forward Road Path -->
+  <path d="M168 140V372" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round"/>
+  <path d="M344 140V372" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round"/>
+  
+  <!-- Dynamic diagonal connecting bridge forming navigation highway -->
+  <path d="M168 256H344" stroke="#F59E0B" stroke-width="32" stroke-linecap="round"/>
+  
+  <!-- Location/Navigation Arrow pin head in amber -->
+  <polygon points="256,160 290,224 256,210 222,224" fill="#F59E0B"/>
+  
+  <!-- Green South African connection pulse -->
+  <circle cx="256" cy="330" r="14" fill="#10B981"/>
+
+  <defs>
+    <radialGradient id="brandGradient" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(256 256) rotate(90) scale(180)">
+      <stop stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#0F172A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

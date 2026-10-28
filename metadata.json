@@ -1,0 +1,6 @@
+{
+  "name": "Hamba — South Africa E-Hailing & Offline Navigation",
+  "description": "Secure South African e-hailing connecting riders and drivers across all 9 provinces and Newcastle with offline maps and rural navigation.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
